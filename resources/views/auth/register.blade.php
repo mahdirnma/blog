@@ -20,8 +20,10 @@
             <input type="email" name="email" id="email" class="w-full h-10 bg-gray-100 rounded mt-5">
             <label for="password" class="mt-5">رمز عبور</label>
             <input type="password" name="password" id="password" class="w-full h-10 bg-gray-100 rounded mt-5">
+{{--
             <label for="confirmPassword" class="mt-5">تکرار رمز عبور</label>
             <input type="password" name="confirmPassword" id="confirmPassword" class="w-full h-10 bg-gray-100 rounded mt-5">
+--}}
             <input type="submit" value="ثبت نام" class="w-full h-12 cursor-pointer text-gray-100 bg-gray-600 rounded mt-8">
         </form>
     </div>

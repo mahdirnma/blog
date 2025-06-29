@@ -22,9 +22,9 @@
                 </ul>
             </nav>
         </div>
-        <form action="{{--{{route('logout')}}--}}" method="post">
+        <form action="{{route('logout')}}" method="post">
             @csrf
-            <button type="submit" class="text-red-700 font-bold"><- logout</button>
+            <button type="submit" class="text-red-700 font-bold cursor-pointer"><- logout</button>
         </form>
     </div>
     @yield('content')

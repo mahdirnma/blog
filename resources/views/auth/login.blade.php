@@ -26,7 +26,7 @@
             @endif
             <input type="submit" value="ورود" class="mt-10 w-full h-12 text-gray-100 bg-gray-600 rounded  cursor-pointer">
         </form>
-{{--        <a href="{{route('register.show')}}" class="mt-10">ثبت نام نکرده اید؟</a>--}}
+        <a href="{{route('register.form')}}" class="mt-10">ثبت نام نکرده اید؟</a>
     </div>
 </div>
 </body>
