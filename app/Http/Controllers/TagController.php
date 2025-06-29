@@ -50,7 +50,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        return view('admin.tags.edit',compact('tag'));
     }
 
     /**
@@ -58,7 +58,11 @@ class TagController extends Controller
      */
     public function update(UpdateTagRequest $request, Tag $tag)
     {
-        //
+        $status=$tag->update($request->all());
+        if($status){
+            return redirect()->route('tags.index');
+        }
+        return redirect()->back();
     }
 
     /**
