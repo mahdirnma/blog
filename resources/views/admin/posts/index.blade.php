@@ -26,7 +26,7 @@
                     @foreach($posts as $post)
                         <tr>
                             <td class="text-center">
-                                <form action="{{--{{route('posts.destroy',compact('post'))}}--}}" method="post">
+                                <form action="{{route('posts.destroy',compact('post'))}}" method="post">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="text-green-600">delete</button>
@@ -40,12 +40,9 @@
                             </td>
                             <td class="text-center">{{$post->user->name}}</td>
                             <td class="text-center">
-{{--
-                                <form action="{{route('posts.show',compact('post'))}}" method="get">
-                                    @csrf
-                                    <button type="submit" class="text-fuchsia-600">tags</button>
-                                </form>
---}}
+                                @foreach($post->tags as $tag)
+                                    {{$tag->title}} ,
+                                @endforeach
                             </td>
                             <td class="text-center">{{$post->category->title}}</td>
                             <td class="text-center">{{$post->description}}</td>
