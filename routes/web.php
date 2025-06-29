@@ -24,9 +24,10 @@ Route::middleware('guest')->group(function () {
     Route::post('/register',[AuthController::class,'register'])->name('register');
 });
 Route::middleware('auth')->group(function () {
-    Route::get('/',[UserController::class,'dashboard'])->name('home');
+    Route::get('/home',[UserController::class,'dashboard'])->name('home');
     Route::resource('/posts',PostController::class);
     Route::resource('/categories',CategoryController::class);
     Route::resource('/tags',TagController::class);
     Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 });
+Route::get('/',[UserController::class,'userDashboard'])->name('user.dashboard');
