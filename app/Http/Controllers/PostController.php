@@ -13,7 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::where('is_active',1)->paginate(2);
+        return view('admin.posts.index',compact('posts'));
     }
 
     /**
